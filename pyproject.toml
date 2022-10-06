@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "augeosciencedatasets"
-version = "0.1.2"
+version = "0.2.0"
 description = "Code and Links to help in managing australian geoscicence datasets"
 authors = ["BenFGA <97581359+BenFGA@users.noreply.github.com>"]
 license = "MIT"

@@ -1,6 +1,7 @@
 import re
 import pandas as pd
-def read_dmp(file:str)->pd.DataFrame:
+
+def dmp(file:str)->pd.DataFrame:
     """
     simple code to import the MRT file format data into a pd.DataFrame
     https://www.dmp.wa.gov.au/Documents/Geological-Survey/GSWA-MineralExplorationTenements_Guideline.pdf
