@@ -20,16 +20,14 @@ def from_dasc(url: str, outfile: Path):
         print(f"{outfile} already exists!")
 
 
-def from_csiro_dap(url:str, basedir:Path, target_files:list[str]):
+def from_csiro_dap(url:str, base_dir:Path, target_files:list[str]):
     # we are going to use the swagger api to get the files from
     # here programatically this first call here is to list all the available files
-    url = "https://data.csiro.au/dap/ws/v2/collections/44783v1/data"
     with urllib.request.urlopen(url) as response:
         response_text = response.read()
     # the variable response_text is returned as a json package we are going to parse
     # it with the python json library
     c3dmm_files = json.loads(response_text)
-    base_dir = Path("data/")
 
     # loop over each of the files in the json
     # if you've already downloaded them then we won't download the files again.
