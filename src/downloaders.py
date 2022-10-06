@@ -5,7 +5,7 @@ from pathlib import Path
 import shutil
 
 
-def download_from_dasc(url: str, outfile: Path):
+def from_dasc(url: str, outfile: Path):
     """simple program to download from the dmp dasc a single file"""
     user_agent: str = "Mozilla/5.0 (Windows NT 6.1; Win64; x64)"
     headers: dict[str] = {"User-Agent": user_agent}
@@ -20,7 +20,7 @@ def download_from_dasc(url: str, outfile: Path):
         print(f"{outfile} already exists!")
 
 
-def download_from_csiro(url:str, basedir:Path, target_files:list[str]):
+def from_csiro_dap(url:str, basedir:Path, target_files:list[str]):
     # we are going to use the swagger api to get the files from
     # here programatically this first call here is to list all the available files
     url = "https://data.csiro.au/dap/ws/v2/collections/44783v1/data"
