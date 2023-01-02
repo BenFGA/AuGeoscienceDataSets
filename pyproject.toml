@@ -1,19 +1,24 @@
+[tox]
+isolated_build = true
+
 [tool.poetry]
 name = "augeosciencedatasets"
-version = "0.2.0"
+version = "0.3.0"
 description = "Code and Links to help in managing australian geoscicence datasets"
 authors = ["BenFGA <97581359+BenFGA@users.noreply.github.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.11"
-pandas = "^1.5.0"
+python = ">=3.5,<=3.11"
+pandas = "^1.0.0"
 matplotlib = { version = "^3.6.2", optional = true }
 
 [tool.poetry.extras]
 viz = ["matplotlib"]
 
 [tool.poetry.dev-dependencies]
+tox = "^4.1.2"
+black = "^22.12.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

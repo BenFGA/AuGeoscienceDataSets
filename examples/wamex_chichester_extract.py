@@ -5,14 +5,12 @@ An example described here: https://www.fractalgeoanalytics.com/articles/wamex-gr
 # import into python the libraries that we need
 from pathlib import Path
 import shutil
-from augeosciencedatasets import downloaders
+from src.augeosciencedatasets import downloaders
 import pandas as pd
-
 import matplotlib.pyplot as plt
 from matplotlib.cm import get_cmap
 
 # download the drilling data from DASC
-
 filekey = 'https://geodocsget.dmirs.wa.gov.au/api/GeoDocsGet?filekey=4b03c1dc-5cf7-4a6d-8121-69daba4956ff-vlfu4wy9eo5pgeos5ueogu82xrz1d13j6v8yxvgk'
 outpath = Path('data/FMG_Chichester')
 if not outpath.exists():

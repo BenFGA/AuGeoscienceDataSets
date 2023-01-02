@@ -1,2 +1,6 @@
 /poetry.lock
 /.vscode
+**__pycache__
+**env**
+**.tox**
+**.pytest_cache**
