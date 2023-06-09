@@ -3,15 +3,15 @@ isolated_build = true
 
 [tool.poetry]
 name = "augeosciencedatasets"
-version = "0.3.0"
-description = "Code and Links to help in managing australian geoscicence datasets"
+version = "0.3.1"
+description = "Code and Links to help in managing australian geoscience datasets"
 authors = ["BenFGA <97581359+BenFGA@users.noreply.github.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = ">=3.5,<=3.11"
+python = ">=3.7,<=3.11"
 pandas = "^1.0.0"
-matplotlib = { version = "^3.6.2", optional = true }
+matplotlib = { version = "^3.5.2", optional = true }
 
 [tool.poetry.extras]
 viz = ["matplotlib"]
