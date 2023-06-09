@@ -29,16 +29,15 @@ def dmp(file: str,
             raise FileNotFoundError(f"File {file} not found")
         with open(file,encoding=encoding) as ff:
             parse_string = ff.read()
-    
+
     elif mode == 'string':
         parse_string = file.decode(encoding=encoding)
     else:
         raise ValueError(f"mode must be either 'file' or 'string' not {mode}")
 
-    parse_string:list[str] = parse_string.split('\r\n')
+    parse_string:list[str] = parse_string.split('\n')
     data, header_keys = dmp_parser(parse_string,header_line,data_line,unit_line,code_line,bdl_line,accuracy_line,udl_line,preferred_line)
     return data, header_keys
-
 
 def dmp_parser(
     parse_string: str,
@@ -68,7 +67,7 @@ def dmp_parser(
         cur_line = len(i)
         line_offset.append(cur_line + last_line)
         last_line = cur_line + last_line
-        tmptext = i.replace('"', "").replace("\n", "").strip("\t").split("\t")
+        tmptext = i.replace('"', "").replace("\r", "").strip("\t").split("\t")
         # check if the first line contains 'H0002' if not break and return
         # warning
         # old files don't start with H0002 but potentially start with H0100
@@ -138,7 +137,7 @@ def dmp_parser(
         n_data = len(tmp_data[0])
         n_cols = len(parameter_names)
         c_cut = min([n_data, n_cols])
-        print(f"Permissive Mode Engaged {parse_string}")
+        print(f"Permissive Mode Engaged")
         # check that there are the right number of columns
         # if we are short append some to the end
         # if too long cut the end off

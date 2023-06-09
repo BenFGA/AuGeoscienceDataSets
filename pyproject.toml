@@ -3,7 +3,7 @@ isolated_build = true
 
 [tool.poetry]
 name = "augeosciencedatasets"
-version = "0.3.1"
+version = "0.3.2"
 description = "Code and Links to help in managing australian geoscience datasets"
 authors = ["BenFGA <97581359+BenFGA@users.noreply.github.com>"]
 license = "MIT"
