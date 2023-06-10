@@ -95,6 +95,7 @@ def dmp_parser(
         if (tmptext[0] in ["H1000", "H01000"]) or (header_line == iters):
             start_data = True
             parameter_names = tmptext[1:]
+            header_keys.update({"H1000": parameter_names})
         if (tmptext[0] in ["H1001", "H01001"]) or (unit_line == iters):
             units = tmptext[1:]
             header_keys.update({"H1001": units})
