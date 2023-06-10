@@ -93,25 +93,24 @@ def dmp_parser(
 
         if (tmptext[0] in ["H1000", "H01000"]) or (header_line == iters):
             start_data = True
-            parameter_names = tmptext[1:]
-
+            parameter_names = tmptext
         if (tmptext[0] in ["H1001", "H01001"]) or (unit_line == iters):
-            units = tmptext[1:]
+            units = tmptext
             header_keys.update({"H1001": units})
         if (tmptext[0] in ["H1002", "H01002"]) or (code_line == iters):
-            code = tmptext[1:]
+            code = tmptext
             header_keys.update({"H1002": code})
 
         if (tmptext[0] in ["H1003", "H01003"]) or (bdl_line == iters):
-            bdl = tmptext[1:]
+            bdl = tmptext
             header_keys.update({"H1003": bdl})
 
         if (tmptext[0] in ["H1004", "H01004"]) or (accuracy_line == iters):
-            accuracy = tmptext[1:]
+            accuracy = tmptext
             header_keys.update({"H1004": accuracy})
 
         if (tmptext[0] in ["H1005", "H01005"]) or (udl_line == iters):
-            udl = tmptext[1:]
+            udl = tmptext
             header_keys.update({"H1005": udl})
         if (tmptext[0] in ["H1006", "H01006"]) or (preferred_line == iters):
             preferred = tmptext[1:]
