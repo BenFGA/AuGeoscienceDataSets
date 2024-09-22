@@ -9,7 +9,7 @@ authors = ["BenFGA <97581359+BenFGA@users.noreply.github.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = ">=3.7,<=3.11"
+python = ">=3.7,<=3.13"
 pandas = "^1.0.0"
 matplotlib = { version = "^3.5.2", optional = true }
 
